@@ -1,0 +1,162 @@
+/* =========================
+Premium Compact Navbar
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* modern glass look */
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  padding: 10px 6vw; /* reduced height */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+/* ===== LOGO ===== */
+
+.navbar .logo {
+  max-width: 60px;
+  height: auto;
+}
+
+/* ===== MENU ===== */
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+
+  font-size: 15px;
+  color: #475569;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+  position: relative;
+  transition: 0.25s;
+}
+
+.navbar-menu li:hover {
+  color: tomato;
+}
+
+/* underline animation */
+
+.navbar-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: tomato;
+  transition: 0.3s;
+}
+
+.navbar-menu li:hover::after,
+.navbar .active::after {
+  width: 100%;
+}
+
+/* ===== RIGHT SIDE ===== */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar-right img {
+  width: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navbar-right img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== BUTTON ===== */
+
+.navbar button {
+  font-size: 14px;
+  padding: 6px 18px;
+  border-radius: 40px;
+
+  border: 1px solid tomato;
+  background: transparent;
+  color: tomato;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.navbar button:hover {
+  background: tomato;
+  color: white;
+}
+
+/* ===== CART DOT ===== */
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  background: tomato;
+  border-radius: 50%;
+
+  top: -4px;
+  right: -4px;
+}
+
+/* =========================
+Responsive
+========================= */
+
+@media (max-width: 1050px) {
+
+  .navbar-menu {
+    gap: 18px;
+    font-size: 14px;
+  }
+
+  .navbar-right {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .navbar-menu {
+    gap: 14px;
+    font-size: 13px;
+  }
+
+  .navbar button {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .navbar-menu {
+    display: none;
+  }
+}
