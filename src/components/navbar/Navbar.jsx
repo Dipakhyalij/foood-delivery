@@ -16,7 +16,7 @@ const Navbar = ({setShowLogin}) => {
                <li
   onClick={() => {
     setMenu("navbar");
-    document.getElementById("header")?.scrollIntoView({
+    document.getElementById("hero")?.scrollIntoView({
       behavior: "smooth"
     });
   }}

@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 const Header = () => {
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
   {/* <img src={headerImage} alt="" /> */}
 
   <div className="hero-content">

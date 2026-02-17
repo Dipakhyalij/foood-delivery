@@ -31,7 +31,7 @@
                       <li>Privacy policy</li>
                     </ul>
       </div>
-        <div className="footer-right">
+        <div className="footer-right">  
           <h2>Get In Touch</h2>
           <ul>
             <li>+91 8799975679</li>
